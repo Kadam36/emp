@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 import dj_database_url 
 from pathlib import Path
-
+from django.core.wsgi import get_wsgi_application
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -72,6 +72,12 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'Emp.wsgi.application'
+
+
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Emp.settings')
+
+application = get_wsgi_application()
 
 
 # Database
