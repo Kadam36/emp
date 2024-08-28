@@ -1,0 +1,17 @@
+# Ignore virtual environment
+venv/
+
+# Ignore compiled bytecode
+**/__pycache__/
+
+# Ignore Django migrations
+myapp/migrations/
+
+# Ignore SQLite database file
+db.sqlite3
+
+# If you have specific secret files or config files, add them here
+*.env
+
+# Ignore all __init__.py files
+**/__init__.py

@@ -1,0 +1,27 @@
+{% extends "home.html" %}
+{% block firstbit %}
+<h1 class="text-center">Update Employee Data</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/update/{{ emp.id }}" method="POST">
+                        {% csrf_token %}
+                        <div class="md-3">
+                            <label for="Name">Name</label>
+                            <input type="text" class="form-control" id="Name" name="Name" placeholder="Enter your name" required value="{{ emp.ename }}">
+                        </div>
+                        <div class="md-3">
+                            <label for="Department">Department</label>
+                            <input type="text" class="form-control" id="Department" name="Department" placeholder="Enter your Department" required value="{{ emp.department }}">
+                        </div>
+                        <div class="container text-center my-2"></div>
+                        <input type="submit" value="Update">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
