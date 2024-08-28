@@ -9,9 +9,9 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-
-from pathlib import Path
 import dj_database_url 
+from pathlib import Path
+
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -85,7 +85,7 @@ WSGI_APPLICATION = 'Emp.wsgi.application'
 # }
 
 DATABASES = {
-    "default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    "default": dj_database_url.parse("postgresql://test_6lmb_user:buffcW8up7gD3ZIjhmOK8xtYg5V9b5u5@dpg-cr7aoa3qf0us73bbs9f0-a.oregon-postgres.render.com/test_6lmb")
 }
 
 
